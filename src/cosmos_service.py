@@ -6,6 +6,8 @@ import time
 import os
 
 COSMOS_API = "https://cosmos.api.bbci.co.uk";
+API_VERSION = "v1";
+
 def getInstances(serviceName, environment):
     try:
         response = requests.get(
@@ -30,7 +32,7 @@ def createLogin(serviceName, environment, instance = 0):
     try:
         payload = { "instance_id" : instanceToLoginTo["id"] }
         response = requests.post(
-            f"{COSMOS_API}/v1/services/{serviceName}/{environment}/logins",
+            f"{COSMOS_API}/{API_VERSION}/services/{serviceName}/{environment}/logins",
             data=json.dumps(payload),
             cert=certificate_service.getCertificateLocation(),
             headers={ "Content-Type" : "application/json" }
