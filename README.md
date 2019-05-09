@@ -13,3 +13,8 @@ cosmos.py [component] [environment]
 location of BBC dev cert set
 
 Python 3
+
+### todo
+
+* add proxy support - needs dict - create proxies module for checking env value - see https://stackoverflow.com/questions/8287628/proxies-with-python-requests-module
+* look at aliasing (like Nates [issh, tssh, lssh])
