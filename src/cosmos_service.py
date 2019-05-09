@@ -5,12 +5,11 @@ import json
 import time
 import os
 
-# check const naming conventions : this looks wrong - prefer CAPITALISED_SNAKE (which probs has a name)
-cosmosApiBase = "https://cosmos.api.bbci.co.uk";
+COSMOS_API = "https://cosmos.api.bbci.co.uk";
 def getInstances(serviceName, environment):
     try:
         response = requests.get(
-            f"{cosmosApiBase}/v1/services/{serviceName}/{environment}/main_stack/instances",
+            f"{COSMOS_API}/v1/services/{serviceName}/{environment}/main_stack/instances",
             cert=certificate_service.getCertificateLocation()
         )
         response.raise_for_status()
@@ -31,7 +30,7 @@ def createLogin(serviceName, environment, instance = 0):
     try:
         payload = { "instance_id" : instanceToLoginTo["id"] }
         response = requests.post(
-            f"{cosmosApiBase}/v1/services/{serviceName}/{environment}/logins",
+            f"{COSMOS_API}/v1/services/{serviceName}/{environment}/logins",
             data=json.dumps(payload),
             cert=certificate_service.getCertificateLocation(),
             headers={ "Content-Type" : "application/json" }
