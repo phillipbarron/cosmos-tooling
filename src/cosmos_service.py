@@ -13,6 +13,7 @@ def getInstances(serviceName, environment):
             cert=certificate_service.getCertificateLocation()
         )
         response.raise_for_status()
+    # todo - can we do this repetetive behaviour in a trait? or dry it up some other way?
     except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
     except Exception as err:
