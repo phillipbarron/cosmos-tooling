@@ -5,6 +5,7 @@ import json
 import time
 import os
 
+# check const naming conventions : this looks wrong - prefer CAPITALISED_SNAKE (which probs has a name)
 cosmosApiBase = "https://cosmos.api.bbci.co.uk";
 def getInstances(serviceName, environment):
     try:
