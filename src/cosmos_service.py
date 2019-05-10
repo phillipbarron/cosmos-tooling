@@ -1,6 +1,7 @@
 import requests
 from requests.exceptions import HTTPError
 import src.certificate_service as certificate_service
+import src.proxy_service as proxy_service
 import json
 import time
 import os
@@ -14,7 +15,8 @@ def getInstances(serviceName, environment):
     try:
         response = requests.get(
             f"{COSMOS_API}/v1/services/{serviceName}/{environment}/main_stack/instances",
-            cert=certificate_service.getCertificateLocation()
+            cert=certificate_service.getCertificateLocation(),
+            proxies=proxy_service.getProxies()
         )
         response.raise_for_status()
     # todo - can we do this repetetive behaviour in a trait? or dry it up some other way?
