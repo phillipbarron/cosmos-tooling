@@ -2,6 +2,7 @@ import os
 
 
 def certificatesExist():
+    # this should filter based on cert type - passPhrase is no required for PEM so need not be checked - the API is wrong here
     requiredCertificateValues = ["CERT_LOCATION", "CERT_PASSPHRASE"]
     requiredValuesAreSet = True
     for value in requiredCertificateValues:
