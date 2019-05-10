@@ -7,6 +7,8 @@ import os
 
 COSMOS_API = "https://cosmos.api.bbci.co.uk"
 API_VERSION = "v1"
+AWS_REGION = "eu-west-1"
+
 
 def getInstances(serviceName, environment):
     try:
@@ -23,19 +25,21 @@ def getInstances(serviceName, environment):
     else:
         return response.json()
 
-def getLoginInstance(serviceName, environment, instance = 0):
-    instances = getInstances(serviceName, environment);
+
+def getLoginInstance(serviceName, environment, instance=0):
+    instances = getInstances(serviceName, environment)
     return instances['instances'][instance]
 
-def createLogin(serviceName, environment, instance = 0):
+
+def createLogin(serviceName, environment, instance=0):
     instanceToLoginTo = getLoginInstance(serviceName, environment, instance)
     try:
-        payload = { "instance_id" : instanceToLoginTo["id"] }
+        payload = {"instance_id": instanceToLoginTo["id"]}
         response = requests.post(
             f"{COSMOS_API}/{API_VERSION}/services/{serviceName}/{environment}/logins",
             data=json.dumps(payload),
             cert=certificate_service.getCertificateLocation(),
-            headers={ "Content-Type" : "application/json" }
+            headers={"Content-Type": "application/json" }
         )
         response.raise_for_status()
     except HTTPError as http_err:
@@ -44,6 +48,7 @@ def createLogin(serviceName, environment, instance = 0):
         print(f'Other error occurred: {err}')
     else:
         return response.json()
+
 
 def getLoginAvailability(loginRefUri):
     try:
@@ -57,17 +62,19 @@ def getLoginAvailability(loginRefUri):
     except Exception as err:
         print(f'Other error occurred: {err}')
     else:
-        return response.json();
+        return response.json()
 
-def login(serviceName, environment, instance = 0):
+
+def login(serviceName, environment, instance=0):
     if certificate_service.certificatesExist():
-        login = createLogin(serviceName, environment, instance = 0)
+        login = createLogin(serviceName, environment, instance=0)
         loginAvailability = getLoginAvailability(login['login']['ref'])
         while loginAvailability['status'] != 'current':
             print(f"login status {loginAvailability['status']}")
             time.sleep(1)
             loginAvailability = getLoginAvailability(login['login']['ref'])
         # look at replacing with subprocess
-        return os.system(f"ssh {loginAvailability['instance_private_ip']},eu-west-1")
+        instanceIp = loginAvailability['instance_private_ip']
+        return os.system(f"ssh {instanceIp},{AWS_REGION}")
     else:
         print("certificates are not set")
