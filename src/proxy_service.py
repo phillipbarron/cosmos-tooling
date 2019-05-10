@@ -15,4 +15,9 @@ def isProxyServerSet():
     return False
 
 
-print(isProxyServerSet())
+def getProxyUrls():
+    proxies = {}
+    for value in proxyServerEnvironmentKeys:
+        if value in os.environ:
+            proxies[value] = os.environ[value]
+    return proxies
