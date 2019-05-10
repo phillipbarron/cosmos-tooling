@@ -1,6 +1,6 @@
 import requests
 from requests.exceptions import HTTPError
-import certificate_service
+import src.certificate_service as certificate_service
 import json
 import time
 import os
