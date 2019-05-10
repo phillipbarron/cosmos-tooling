@@ -5,8 +5,8 @@ import json
 import time
 import os
 
-COSMOS_API = "https://cosmos.api.bbci.co.uk";
-API_VERSION = "v1";
+COSMOS_API = "https://cosmos.api.bbci.co.uk"
+API_VERSION = "v1"
 
 def getInstances(serviceName, environment):
     try:
@@ -21,7 +21,7 @@ def getInstances(serviceName, environment):
     except Exception as err:
         print(f'Other error occurred: {err}')
     else:
-        return response.json();
+        return response.json()
 
 def getLoginInstance(serviceName, environment, instance = 0):
     instances = getInstances(serviceName, environment);
@@ -43,7 +43,7 @@ def createLogin(serviceName, environment, instance = 0):
     except Exception as err:
         print(f'Other error occurred: {err}')
     else:
-        return response.json();
+        return response.json()
 
 def getLoginAvailability(loginRefUri):
     try:
