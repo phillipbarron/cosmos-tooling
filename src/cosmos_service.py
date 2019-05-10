@@ -39,7 +39,7 @@ def createLogin(serviceName, environment, instance=0):
             f"{COSMOS_API}/{API_VERSION}/services/{serviceName}/{environment}/logins",
             data=json.dumps(payload),
             cert=certificate_service.getCertificateLocation(),
-            headers={"Content-Type": "application/json" }
+            headers={"Content-Type": "application/json"}
         )
         response.raise_for_status()
     except HTTPError as http_err:
