@@ -12,6 +12,10 @@ cosmos.py [component] [environment]
 
 location of BBC dev cert set
 
+```bash
+export CERT_LOCATION=/path/to/unencrypted/combined/cert
+```
+
 Python 3
 
 ### todo

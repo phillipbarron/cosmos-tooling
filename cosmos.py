@@ -12,7 +12,7 @@ else:
     # todo - extract this to a menu interaction module
     service = sys.argv[1]
     environment = sys.argv[2]
-    instance = None;
+    instance = None
     if len(sys.argv) > 3:
         instance = sys.argv[3]
     if environment not in valid_environments:
