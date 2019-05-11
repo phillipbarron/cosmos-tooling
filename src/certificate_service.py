@@ -1,4 +1,5 @@
 import os
+from OpenSSL import crypto
 
 
 def certificatesExist(certificateType="PEM"):
@@ -23,3 +24,14 @@ def getCertificateLocation(certificateType="PEM"):
         "P12": "CERT_LOCATION",
     }
     return os.environ[locationHash[certificateType]]
+
+
+def buildCombinedCertificate(cert_location):
+    p12Certificate = crypto.load_pkcs12(
+        open(cert_location, 'rb').read(),
+        os.environ["CERT_PASSPHRASE"]
+    )
+    print(p12Certificate)
+
+
+# buildCombinedCertificate(os.environ["DEV_CERT_P12"])
