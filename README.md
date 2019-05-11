@@ -21,5 +21,5 @@ Python 3
 ### todo
 
 * look at aliasing (like Nate's [issh, tssh, lssh])
-* we need a dev cert PEM builder / exporter - do this next & revisit the logic in the cert_service cause it's wrong
+* we need a dev cert PEM builder / exporter
 * find and use testing library

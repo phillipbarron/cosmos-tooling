@@ -1,11 +1,13 @@
 import os
 
 
-def certificatesExist():
-    # this should filter based on cert type - passPhrase is no required for PEM so need not be checked - the API is wrong here
-    requiredCertificateValues = ["CERT_LOCATION", "CERT_PASSPHRASE"]
+def certificatesExist(certificateType="PEM"):
+    requiredCertificateValues = {
+        "PEM": ["CERT_LOCATION"],
+        "P12": ["CERT_LOCATION", "CERT_PASSPHRASE"]
+    }
     requiredValuesAreSet = True
-    for value in requiredCertificateValues:
+    for value in requiredCertificateValues[certificateType]:
         try:
             os.environ[value]
         except KeyError:
