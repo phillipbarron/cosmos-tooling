@@ -31,7 +31,8 @@ def buildCombinedCertificate(cert_location):
         open(cert_location, 'rb').read(),
         os.environ["CERT_PASSPHRASE"]
     )
-    print(p12Certificate)
+    print(p12Certificate.get_certificate())
+    print(p12Certificate.get_privatekey())
 
 
 # buildCombinedCertificate(os.environ["DEV_CERT_P12"])
