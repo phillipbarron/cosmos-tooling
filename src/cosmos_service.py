@@ -74,7 +74,6 @@ def login(serviceName, environment, instance=0):
             print(f"login status {loginAvailability['status']}")
             time.sleep(1)
             loginAvailability = getLoginAvailability(login['login']['ref'])
-        # look at replacing with subprocess
         instanceIp = loginAvailability['instance_private_ip']
         return os.system(f"ssh {instanceIp},{AWS_REGION}")
     else:
