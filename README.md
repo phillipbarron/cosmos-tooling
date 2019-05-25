@@ -23,3 +23,4 @@ Python 3
 * look at aliasing (like Nate's [issh, tssh, lssh])
 * we need a dev cert PEM builder / exporter
 * find and use testing library
+* look at how pipenv works across OSs and update install istructions accoridingly
