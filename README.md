@@ -10,13 +10,18 @@ cosmos.py [component] [environment]
 
 ## Requires
 
-location of BBC dev cert set
+location of BBC dev cert exported
 
 ```bash
 export CERT_LOCATION=/path/to/unencrypted/combined/cert
 ```
 
-Python 3
+* Python 3
+* pyOpenSSL
+
+```bash
+pip3 install pyOpenSSL
+```
 
 ### todo
 
