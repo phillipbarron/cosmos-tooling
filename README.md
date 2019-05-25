@@ -26,6 +26,7 @@ pip3 install pyOpenSSL
 ### todo
 
 * look at aliasing (like Nate's [issh, tssh, lssh])
-* we need a dev cert PEM builder / exporter
+* create dev cert PEM builder / exporter
 * find and use testing library
 * look at how pipenv works across OSs and update install istructions accoridingly
+* perhaps looks at integration with VDT (basically a node implementation) - could event extend the cosmos CLI verison
