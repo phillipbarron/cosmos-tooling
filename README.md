@@ -29,4 +29,4 @@ pip3 install pyOpenSSL
 * create dev cert PEM builder / exporter
 * find and use testing library
 * look at how pipenv works across OSs and update install istructions accoridingly
-* perhaps looks at integration with VDT (basically a node implementation) - could event extend the cosmos CLI verison
+* perhaps looks at integration with VDT (basically a node implementation) - could event extend the cosmos CLI verison - node ssh libs I have looked at are a little limited: no obvious way to use the systems .ssh conf
