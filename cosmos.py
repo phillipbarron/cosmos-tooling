@@ -5,11 +5,10 @@ import src.cosmos_service as cosmos_service
 
 valid_environments = ['int', 'test', 'stage', 'live']
 
+# todo - extract this to a menu interaction module - commander link python?
 if len(sys.argv) < 3:
-    # todo - finesse this
     print("Usage:\ncosmos [service] [environment] [instance number (defaults to 0)]")
 else:
-    # todo - extract this to a menu interaction module
     service = sys.argv[1]
     environment = sys.argv[2]
     instance = None
