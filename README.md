@@ -2,7 +2,7 @@
 
 ## usage
 
-### log in to a cosmos deployed ec2 instance
+### log in to a cosmos-deployed ec2 instance
 
 ```bash
 cosmos.py [component] [environment]
