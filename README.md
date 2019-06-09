@@ -24,6 +24,12 @@ export CERT_LOCATION=/path/to/unencrypted/combined/cert
 pip3 install pyOpenSSL requests
 ```
 
+### build executable
+
+```bash
+pyinstaller --onefile -n cssh cosmos.py
+```
+
 ### todo
 
 * look at aliasing (like Nate's [issh, tssh, lssh])
