@@ -11,11 +11,12 @@ if len(sys.argv) < 3:
 else:
     service = sys.argv[1]
     environment = sys.argv[2]
-    instance = None
+    instance = 0
     if len(sys.argv) > 3:
-        instance = sys.argv[3]
+        instance = int(sys.argv[3])
+        print(f"instance {instance}")
+
     if environment not in valid_environments:
         print(f"{environment} is not a valid environment. Valid options are {valid_environments}")
         exit(1)
-    instance = None
     cosmos_service.login(service, environment, instance)
