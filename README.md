@@ -35,6 +35,6 @@ pyinstaller --onefile -n cssh cosmos.py
 * look at aliasing (like Nate's [issh, tssh, lssh])
 * create dev cert PEM builder / exporter
 * find and use testing library
-* look at how pipenv works across OSs and update install istructions accoridingly - we'd like a single install command - this sucks a bit
+* look at how pipenv works across OSs and update install instructions accoridingly - we'd like a single install command - this sucks a bit :/
 * add an .ssh config checker or at least a link to the .ssh instructions
 * look at https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df for ideas regarding cli
