@@ -1,4 +1,4 @@
-# Cpsmos tooling
+# Cosmos tooling
 
 ## Usage
 
