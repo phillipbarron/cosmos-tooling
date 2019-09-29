@@ -1,5 +1,7 @@
 # Cosmos tooling
 
+Like logging on the cosmos services? Then you'll love this. It does that. 
+
 ## Usage
 
 ### log in to a cosmos-deployed instance
