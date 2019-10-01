@@ -3,7 +3,7 @@
 import sys
 import src.cosmos_service as cosmos_service
 
-valid_environments = ['int', 'test', 'stage', 'live']
+valid_environments = ['int', 'test', 'stage', 'live'] # add training support here?
 
 # todo - extract this to a menu interaction module - commander link python?
 if len(sys.argv) < 3:
