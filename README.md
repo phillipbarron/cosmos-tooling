@@ -1,6 +1,8 @@
-# cosmos-tooling
+# Cosmos tooling
 
-## usage
+Like logging on the cosmos services? Then you'll love this. It does that. 
+
+## Usage
 
 ### log in to a cosmos-deployed instance
 
@@ -26,7 +28,6 @@ pip3 install pyOpenSSL requests
 
 ### todo
 
-* look at aliasing (like Nate's [issh, tssh, lssh])
 * create dev cert PEM builder / exporter
 * look at how pipenv works across OSs and update install instructions accoridingly - we'd like a single install command - this sucks a bit :/
 * add an .ssh config checker or at least a link to the .ssh instructions
