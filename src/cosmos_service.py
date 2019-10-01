@@ -67,7 +67,7 @@ def getLoginAvailability(loginRefUri):
 
 
 def login(serviceName, environment, instance=0):
-    if certificate_service.certificatesExist():
+    if certificate_service.certificateValuesExported():
         login = createLogin(serviceName, environment, instance)
         loginAvailability = getLoginAvailability(login['login']['ref'])
         while loginAvailability['status'] != 'current':

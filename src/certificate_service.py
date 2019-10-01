@@ -2,7 +2,7 @@ import os
 from OpenSSL import crypto
 
 
-def certificatesExist(certificateType="PEM"):
+def certificateValuesExported(certificateType="PEM"):
     requiredCertificateValues = {
         "PEM": ["CERT_LOCATION"],
         "P12": ["CERT_LOCATION", "CERT_PASSPHRASE"]

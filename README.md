@@ -37,10 +37,12 @@ pip3 install pyOpenSSL requests
 
 ```bash
 pythonLogin(){
-  $HOME/workspace/cosmos-tooling/cosmos.py $2 $1
+  $HOME/workspace/cosmos-tooling/cosmos.py $2 $1 $3
 }
 
-alias issh='pythonLogin $1 int'
-alias tssh='pythonLogin $1 test'
-alias lssh='pythonLogin $1 live'
+alias cssh='$HOME/workspace/cosmos-tooling/cosmos.py'
+
+alias issh='pythonLogin $1 int $2'
+alias tssh='pythonLogin $1 test $2'
+alias lssh='pythonLogin $1 live $2'
 ```
