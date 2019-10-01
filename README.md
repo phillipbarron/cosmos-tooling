@@ -1,6 +1,6 @@
 # Cosmos tooling
 
-Like logging on the cosmos services? Then you'll love this. It does that. 
+Like logging on the cosmos services? Then you'll *love* this. 
 
 ## Usage
 
