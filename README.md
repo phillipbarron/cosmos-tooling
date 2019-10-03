@@ -7,7 +7,7 @@ Like logging on the cosmos services? Then you'll *love* this.
 ### log in to a cosmos-deployed instance
 
 ```bash
-cosmos.py [component] [environment]
+./cosmos.py [component] [environment]
 ```
 
 ## Requires
