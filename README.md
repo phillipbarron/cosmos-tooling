@@ -1,6 +1,6 @@
 # Cosmos tooling
 
-Like logging on the cosmos services? Then you'll *love* this. 
+Like logging on the cosmos services? Then you'll *love* this.
 
 ## Usage
 
@@ -15,7 +15,7 @@ cosmos.py [component] [environment]
 location of BBC dev cert exported
 
 ```bash
-export CERT_LOCATION=/path/to/unencrypted/combined/cert
+export DEV_CERT_PEM=/path/to/unencrypted/combined/cert
 ```
 
 * Python 3
