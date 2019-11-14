@@ -10,7 +10,6 @@ COSMOS_API = "https://cosmos.api.bbci.co.uk"
 API_VERSION = "v1"
 AWS_REGION = "eu-west-1"
 
-
 def getInstances(serviceName, environment):
     try:
         response = requests.get(
@@ -20,7 +19,10 @@ def getInstances(serviceName, environment):
         )
         response.raise_for_status()
     except HTTPError as http_err:
-        print(f'HTTP error occurred: {http_err}')
+        if http_err.response.status_code == 404:
+            print(f"No service named {serviceName} found in {environment} environment")
+            raise SystemExit
+        print(f"HTTPError: {http_error}")
     except Exception as err:
         print(f'Other error occurred: {err}')
     else:

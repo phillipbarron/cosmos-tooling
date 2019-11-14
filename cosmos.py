@@ -9,6 +9,7 @@ valid_environments = ['int', 'test', 'stage', 'live'] # add training support her
 if len(sys.argv) < 3:
     print("Usage:\ncosmos [service] [environment] [instance number (defaults to 0)]")
 else:
+
     service = sys.argv[1]
     environment = sys.argv[2]
     instance = 0
