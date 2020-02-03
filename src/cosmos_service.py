@@ -22,7 +22,7 @@ def getInstances(serviceName, environment):
         if http_err.response.status_code == 404:
             print(f"No service named {serviceName} found in {environment} environment")
             raise SystemExit
-        print(f"HTTPError: {http_error}")
+        print(f"HTTPError: {http_err}")
     except Exception as err:
         print(f'Other error occurred: {err}')
     else:
