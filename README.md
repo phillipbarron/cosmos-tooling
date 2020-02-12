@@ -28,7 +28,7 @@ pip3 install pyOpenSSL requests
 
 ### todo
 
-* create dev cert PEM builder / exporter
+* create dev cert PEM builder / exporter - could just run the bash script here right?
 * look at how pipenv works across OSs and update install instructions accoridingly - we'd like a single install command - this sucks a bit :/
 * add an .ssh config checker or at least a link to the .ssh instructions
 * look at https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df for ideas regarding cli

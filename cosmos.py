@@ -15,7 +15,7 @@ else:
     instance = 0
     if len(sys.argv) > 3:
         instance = int(sys.argv[3])
-        print(f"instance {instance}")
+        print(f"lohhing in to instance {instance}")
 
     if environment not in valid_environments:
         print(f"{environment} is not a valid environment. Valid options are {valid_environments}")
